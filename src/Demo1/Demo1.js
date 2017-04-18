@@ -30,7 +30,12 @@ class LikeButton extends Component {
     super()
     this.state = { isLiked: false, name: 'Tomy' }
   }
-
+  componentWillMount() {
+    console.log('组件挂载之前！')
+  }
+  componentDidMount() {
+    console.log('组件挂载之后！')
+  }
   handleClick() {
     this.setState({
       isLiked: !this.state.isLiked
